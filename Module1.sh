@@ -23,7 +23,8 @@ Physical Layer"
 s10="s10:
 SD-WAN"
 sections=("$s1" "$s2" "$s3" "$s4" "$s5" "$s6" "$s7" "$s8" "$s9" "$s10")
-read -p "Type the section (EX: for "FHRP" type--> "s4") or type list for help." input
+echo "Type the section (EX: for "FHRP" type--> "s4") or type list for help." 
+read input
 if [[ "${input}" == "list" ]] ; then 
     echo ${sections[-0]}
     echo ${sections[-9]}
@@ -65,7 +66,7 @@ if [[ "${input}" == "s9" ]] ; then
     fi 
 if [[ "${input}" == "s10" ]] ; then
     /bin/bash section10.sh
-    fi
-else 
-    echo "ERROR: --> uh-oh that ain't how this works B"
+    fi 
+    else
+echo "ERROR: --> look at the instructions B"
     fi
