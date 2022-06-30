@@ -68,4 +68,7 @@ if [[ "${input}" == "s10" ]] ; then
     fi
 else
     echo "ERROR: --> look at the instructions B"
-    fi
+fi
+
+echo "Type the section (EX: for "FHRP" type--> "s4") or type list for help." 
+read input
