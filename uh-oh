@@ -1,0 +1,11 @@
+ERROR: --> uh-oh that ain't how this works B
+    fi
+if [[ list == s8 ]] ; then
+	/bin/bash ./section8.sh
+    else
+    echo ERROR: -- that aint how this works B
+    fi
+if [[ "${input}" == "s9" ]] ; then
+	/bin/bash ./section9.sh
+     else
+    echo "ERROR: --> uh-oh that aint how this works B
