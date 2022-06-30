@@ -66,5 +66,5 @@ if [[ "${input}" == "s10" ]] ; then
     /bin/bash section10.sh
     fi
 else
-    echo "ERROR: --> uh-oh that ain't how this works B"
+    echo "ERROR: --> look at the instructions B"
     fi
