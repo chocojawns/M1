@@ -15,17 +15,30 @@ echo            "FHRP (First Hop Redundancy Protocol)
             WORLD OF NETWORKING THAT WE KNOW TODAY 
 
                             **** HSRP ****
-            -(Hot Standby Routing Protocol)
-            -HSRP is Cisco Proprietary
-            -Active/Standby
-            -Port 1985, UDP 
+            - (Hot Standby Routing Protocol)
+            - HSRP is Cisco Proprietary
+            - Active/Standby
+            - RFC 2281
+            - Port 1985, UDP IPV4
+            - Port 2029, UDP IPV6
             -Highest priority is selected as the Active router 
                 --Default Priority is 100 
             ** IF SAME PRIORITY HIGHEST IP IS SELECTED AS PRIMARY ROUTE **
             -Version 1 of HSRP 
+                -- MAC Address 0C.07.AC.XX.XX.XX 
                 -- 224.0.0.2     MULTICAST
-                --   
-                --224.0.0.102  VERSION 2
-            
-            
-            
+                -- Cant do CGMP (Cisco Group Management Protocol) at the
+                same time as Version 1 HSRP.
+                -- Standby group number is 0 by default.
+                -- Standby hello time 3 seconds.
+                -- Standby holdtime 10 seconds.
+                -- Up to 255 standby groups.
+                
+
+            -Version 2 of HSRP
+                -- MAC Address 0C.9F.XX.XX.XX.XX
+                -- 224.0.0.102    MULTICAST
+                -- CGMP can be enabled at the same time as version 2 HSRP
+                because the leave processing is no longer mutually exclusive.
+                -- Able to use IPV6.
+                -- Up to 4096 standby groups.
