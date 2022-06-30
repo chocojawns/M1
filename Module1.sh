@@ -61,10 +61,11 @@ if [[ "${input}" == "s8" ]] ; then
 	/bin/bash ./section8.sh
     fi
 if [[ "${input}" == "s9" ]] ; then
-	/bin/bash ./section9.sh 
+	/bin/bash ./section9.sh
+    fi 
 if [[ "${input}" == "s10" ]] ; then
     /bin/bash section10.sh
     fi
-else
+else 
     echo "ERROR: --> uh-oh that ain't how this works B"
     fi
