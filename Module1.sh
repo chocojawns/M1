@@ -67,6 +67,6 @@ if [[ "${input}" == "s9" ]] ; then
 if [[ "${input}" == "s10" ]] ; then
     /bin/bash section10.sh
     fi 
-    else
+else
 echo "ERROR: --> look at the instructions B"
     fi
