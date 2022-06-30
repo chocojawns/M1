@@ -25,7 +25,7 @@ echo            "FHRP (First Hop Redundancy Protocol)
                 --Default Priority is 100 
             ** IF SAME PRIORITY HIGHEST IP IS SELECTED AS PRIMARY ROUTE **
             -Version 1 of HSRP 
-                -- MAC Address 0C.07.AC.XX.XX.XX 
+                -- MAC Address 00.00.0C.07.AC.XX
                 -- 224.0.0.2     MULTICAST
                 -- Cant do CGMP (Cisco Group Management Protocol) at the
                 same time as Version 1 HSRP.
@@ -36,7 +36,7 @@ echo            "FHRP (First Hop Redundancy Protocol)
                 
 
             -Version 2 of HSRP
-                -- MAC Address 0C.9F.XX.XX.XX.XX
+                -- MAC Address 00.00.0C.9F.F0.00
                 -- 224.0.0.102    MULTICAST
                 -- CGMP can be enabled at the same time as version 2 HSRP
                 because the leave processing is no longer mutually exclusive.
