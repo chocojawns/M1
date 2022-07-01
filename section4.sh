@@ -42,3 +42,5 @@ echo            "FHRP (First Hop Redundancy Protocol)
                 because the leave processing is no longer mutually exclusive.
                 -- Able to use IPV6.
                 -- Up to 4096 standby groups.
+                --Standby holdtime 10 seconds.
+                -- Up to 255 standby groups"
