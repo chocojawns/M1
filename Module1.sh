@@ -35,7 +35,7 @@ if [[ "${input}" == "list" ]] ; then
     echo ${sections[-4]}
     echo ${sections[-3]}
     echo ${sections[-2]}
-    echo ${sections[-1]}
+    echo ${sections[-1]} 
     fi
 if [[ "${input}" == "s1" ]] ; then 
 	echo ${section1[@]}
@@ -62,11 +62,11 @@ if [[ "${input}" == "s8" ]] ; then
 	/bin/bash ./section8.sh
     fi
 if [[ "${input}" == "s9" ]] ; then
-	/bin/bash ./section9.sh
+	/bin/bash ./section9.sh ;
     fi 
 if [[ "${input}" == "s10" ]] ; then
-    /bin/bash section10.sh ;
-    fi
+    /bin/bash ./section10.sh ;
+     
 else
-echo "ERROR: --> look at the instructions B"
+    echo "ERROR: --> look at the instructions B"
     fi
