@@ -43,4 +43,15 @@ echo            "FHRP (First Hop Redundancy Protocol)
                 -- Able to use IPV6.
                 -- Up to 4096 standby groups.
                 --Standby holdtime 10 seconds.
-                -- Up to 255 standby groups"
+                -- Up to 255 standby groups
+
+                    3 Multicast messages HSRP uses 
+            
+            -Coup
+                -- messges is sent when a standby device wants to assume the active
+                role.
+            -Hello
+                -- Convey other HSRP devices about Priority and state information.
+            -Resign
+                -- Sent by a Active device when it is about to shutdown or when a
+                device with a high priority sends a coupe or a hello request.
