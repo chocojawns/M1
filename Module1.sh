@@ -2,6 +2,8 @@
 #### CCNP Module 1 and notes
 #### this is an attempt lol
 ######################################################################################################
+list="topics:
+Exam Topics"
 s1="s1:
 Flat Design"
 s2="s2:
@@ -9,7 +11,7 @@ Enterprise Campus Model"
 s3="s3:
 Enterprise Architecture Model"
 s4="s4:
-FHRP"
+FHRP & SSO"
 s5="s5:
 High Availability"
 s6="s6:
@@ -22,11 +24,12 @@ s9="s9:
 Physical Layer"
 s10="s10:
 SD-WAN"
-sections=("$s1" "$s2" "$s3" "$s4" "$s5" "$s6" "$s7" "$s8" "$s9" "$s10")
+sections=("$list" "$s1" "$s2" "$s3" "$s4" "$s5" "$s6" "$s7" "$s8" "$s9" "$s10")
 echo "Type the section (EX: for "FHRP" type--> "s4") or type list for help." 
 read input
 if [[ "${input}" == "list" ]] ; then 
     echo ${sections[-0]}
+    echo ${sections[-10]}
     echo ${sections[-9]}
     echo ${sections[-8]}
     echo ${sections[-7]}
@@ -36,6 +39,9 @@ if [[ "${input}" == "list" ]] ; then
     echo ${sections[-3]}
     echo ${sections[-2]}
     echo ${sections[-1]} 
+    fi
+    if [[ "${input}" == "topics" ]] ; then
+    /bin/bash ./topics.sh
     fi
 if [[ "${input}" == "s1" ]] ; then 
 	echo ${section1[@]}
