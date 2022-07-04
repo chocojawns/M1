@@ -3,7 +3,9 @@
 #### "LIKE RIGHT NOW!!!!"
 #### *SIIIIIIIIIP SOUNDS*
 
-echo "Enterprise Campus Model
+echo "Enterprise Campus Model  
+                                KNOWN AS THE THREE TIER BOI
+
 	What is it used for and why use it?
     The Enterprise Campus Model is used for larger sized networks which includes 3 layers.
 
@@ -51,4 +53,39 @@ echo "Enterprise Campus Model
             | For small networks, the core and distribution layers merge into
             what is known as a
             (collapsed core network) or (two-tier architecture design). the
-            issue with this is that it allows limited scalability."
+            issue with this is that it allows limited scalability BUT reduces cost.
+
+                            WHY USE A 2 TIER VS A 3 TIER
+        The two tier network MUST PROVIDE.
+            - High-speed physical and logical paths.
+            - Layer 2 aggregation and demarcation point.
+            - Routing and network access policies.
+            - Intelligent network services (for example, QoS, network
+              virtualization).
+
+        There are two versions of the "collapsed core" design 
+            -Layer 2 Access Design (Access layer is layer 2 switches)
+                -- Known as the traditional LAN design
+                -- Relies on Layer 2 Protocols to prevent loops. Issue with this 
+                is that it is just simpler to use layer 3 switches. You are losing 
+                Bandwidth or using double the ehternet cable, when you can just use
+                1 ethernet cable with a laeyr 3 switch and lose nothung but some
+                money.
+            -Layer 3 Access Design (Access layer is layer 3 switches)
+                -- Doesn't need to use STP,FHRP
+                -- For troubleshooting purposes you are able to ping 
+                other than the managment VLAN
+                -- Able to use routing protocol EIGRP, RIP, OSPF
+
+                            VSS and Stacking technologies
+            - You can stack any switch to any Campus Model to make things
+            more simple.
+
+                --VSS (Virtual Switching System) / Cisco StackWise
+                    --- Allows swithes to act/ be configured as one switch.
+                    --- Access switch can use a single Multichassis EtherChannel
+                    (MEC) upstream link to connect to a distribution switch.
+                    --- Eliminates the use for FHRP.
+                    --- STP is not relied on as much .
+                    --- Allows you to use a Hub-and-spoke network topology.
+                    
