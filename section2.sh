@@ -79,9 +79,9 @@ echo "Enterprise Campus Model
 
                             VSS and Stacking technologies
 
-        ---------------------------------------------------------------------
+        ----------------------------------------------------------------------
         |    -APART OF THE SIMPLIFIED CAMPUS DESIGN!!!!!!!!!!!!!!!!!!!!!!!   |
-        ---------------------------------------------------------------------
+        ----------------------------------------------------------------------
             - You can stack any switch to any Campus Model to make things
             more simple.
 
