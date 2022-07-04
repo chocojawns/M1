@@ -78,6 +78,10 @@ echo "Enterprise Campus Model
                 -- Able to use routing protocol EIGRP, RIP, OSPF
 
                             VSS and Stacking technologies
+
+        ---------------------------------------------------------------------
+        |    -APART OF THE SIMPLIFIED CAMPUS DESIGN!!!!!!!!!!!!!!!!!!!!!!!   |
+        ---------------------------------------------------------------------
             - You can stack any switch to any Campus Model to make things
             more simple.
 
@@ -88,4 +92,3 @@ echo "Enterprise Campus Model
                     --- Eliminates the use for FHRP.
                     --- STP is not relied on as much .
                     --- Allows you to use a Hub-and-spoke network topology.
-                    
