@@ -91,4 +91,4 @@ echo "Enterprise Campus Model
                     (MEC) upstream link to connect to a distribution switch.
                     --- Eliminates the use for FHRP.
                     --- STP is not relied on as much .
-                    --- Allows you to use a Hub-and-spoke network topology.
+                    --- Allows you to use a Hub-and-spoke network topology."
