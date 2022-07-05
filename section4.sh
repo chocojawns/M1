@@ -48,17 +48,51 @@ echo            "FHRP (First Hop Redundancy Protocol)
                     3 Multicast messages HSRP uses 
             
             -Coup
-                -- messges is sent when a standby device wants to assume the active
+                -- messges is sent when a standby device wants to assume the
+                active
                 role.
             -Hello
-                -- Convey other HSRP devices about Priority and state information.
+                -- Convey other HSRP devices about Priority and state
+                information.
             -Resign
-                -- Sent by a Active device when it is about to shutdown or when a
+                -- Sent by a Active device when it is about to shutdown or
+                when a
                 device with a high priority sends a coupe or a hello request.
 
         ----------------------------------------------------------------------
         |                         EXAM ALERT!!!!!!!!                         |
         |                                                                    |
-        |           MAKE SURE YOU KNOW THE DIFFERENT STATES OF HSRP          |        
-        |                                                                    |   
-        ----------------------------------------------------------------------"
+        |           MAKE SURE YOU KNOW THE DIFFERENT STATES OF HSRP          |
+        |                                                                    |
+        |        Aye Init Disabled well Learn Listen Speak and Standby       |
+        |                                                                    |
+        ----------------------------------------------------------------------
+
+                                    STATES OF HSRP
+
+            - Active:
+                -- Forwards all traffic and responding to all ARP request
+                for the virtual IP address
+
+            -Init or disabled
+                -- Not ready to do HSRP yet, either the interface is down or
+                device
+                is booting up or its in a groupt with out a specific IP
+                address.
+
+            - Learn
+                -- Device waits to receieve a hello messgae from the active
+                router
+                so it can learn the virtual IP address, its listening to the
+                active 
+                router.
+            
+            - Listen
+                -- Device receives a hello message.
+
+            - Speak
+                -- Device is sending and receiving heloo messgaes.
+
+            - Standby
+                --Device is ready to become the active device in case the 
+                active device goes down
