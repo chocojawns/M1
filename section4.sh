@@ -55,3 +55,10 @@ echo            "FHRP (First Hop Redundancy Protocol)
             -Resign
                 -- Sent by a Active device when it is about to shutdown or when a
                 device with a high priority sends a coupe or a hello request.
+
+        ----------------------------------------------------------------------
+        |                         EXAM ALERT!!!!!!!!                         |
+        |                                                                    |
+        |           MAKE SURE YOU KNOW THE DIFFERENT STATES OF HSRP          |        
+        |                                                                    |   
+        ----------------------------------------------------------------------
