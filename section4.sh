@@ -40,7 +40,6 @@ echo            "FHRP (First Hop Redundancy Protocol)
     | -Standby hello time 3 seconds.                 |       -Standby hello time 3 seconds          |
     | -Standby holdtime 10 seconds.                  |       -Standby holdtime 10 sewconds          |
     | -Up to 255 standby groups                      |                                              |
-    |                                                |                                              |
     -------------------------------------------------------------------------------------------------
                     3 Multicast messages HSRP uses 
             
