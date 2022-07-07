@@ -14,7 +14,7 @@ echo            "FHRP (First Hop Redundancy Protocol)
             -STARTING WITH THE BEST FHRP, THAT PAVED THE WAY TO THE GLORIUS 
             WORLD OF NETWORKING THAT WE KNOW TODAY 
 
-                            **** HSRP ****
+                                ******** HSRP ********
             - (Hot Standby Routing Protocol)
             - HSRP is Cisco Proprietary
             - Active/Standby
@@ -26,15 +26,23 @@ echo            "FHRP (First Hop Redundancy Protocol)
             -Highest priority is selected as the Active router 
                 --Default Priority is 100 
             ** IF SAME PRIORITY HIGHEST IP IS SELECTED AS PRIMARY ROUTE **
+            - HSRP can lower priority of devices that fail, goes down in increments of 10 be 
            - HSRP can lower priority of devices that fail, goes down in increments of 10 be 
+            - HSRP can lower priority of devices that fail, goes down in increments of 10 be 
            default called "object tracking"
+            - Two types of authentication plaintext and MD5 
+                -- PLaintext: can only use a maximum of 8 characters long
+                -- MD5: uses hashes -_-
+            -hello and dead timers can use MSEC but only when configured default is seconds
+                -- timers can be set between 1 to 255
 
     Load sharing can be set up by configuring both paths to the core with HSRP by using MHSRP
     (Multigroup Hot Standby Routing Protocol). THE BREAK DWON: if you have 2 layer 3 switches using 2
     diffrent VLANS using trunks then those 2 switches are competeting with each other because 1 switch
     has to be the active switcha and one has to be the stnadby. HOWEVER you can figure HSRP with MHSRP
     so switch A can be in group 20 for VLAN 20 as the active switch and switch B is standby while you
-    configure switch B in group 10 for VLAN 10 as the active switch and switch A is standby.
+    configure switch B in group 10 for VLAN 10 as the active switch and switch A is standby. MHSRP is 
+    like making a street for one secific HSRP group.
 
             -Version 1 of HSRP                                      -Version 2 of HSRP
     -------------------------------------------------------------------------------------------------
@@ -91,4 +99,13 @@ echo            "FHRP (First Hop Redundancy Protocol)
 
         - Standby
             --Device is ready to become the active device in case the 
-            active device goes down"
+            active device goes down
+
+                                ******** VRRP ********
+
+        - (Virtual Routing Redundancy Protocol)
+        - Master / Backup
+        - 0 priority means the current master router has stopped participating in 
+        VRRP
+            -- Setting the priority value to 0 triggers the next backup to change
+            the master.
