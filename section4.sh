@@ -95,4 +95,4 @@ echo            "FHRP (First Hop Redundancy Protocol)
 
             - Standby
                 --Device is ready to become the active device in case the 
-                active device goes down
+                active device goes down"S
