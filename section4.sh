@@ -28,7 +28,13 @@ echo            "FHRP (First Hop Redundancy Protocol)
             ** IF SAME PRIORITY HIGHEST IP IS SELECTED AS PRIMARY ROUTE **
            - HSRP can lower priority of devices that fail, goes down in increments of 10 be 
            default called "object tracking"
-           -
+
+    Load sharing can be set up by configuring both paths to the core with HSRP by using MHSRP
+    (Multigroup Hot Standby Routing Protocol). THE BREAK DWON: if you have 2 layer 3 switches using 2
+    diffrent VLANS using trunks then those 2 switches are competeting with each other because 1 switch
+    has to be the active switcha and one has to be the stnadby. HOWEVER you can figure HSRP with MHSRP
+    so switch A can be in group 20 for VLAN 20 as the active switch and switch B is standby while you
+    configure switch B in group 10 for VLAN 10 as the active switch and switch A is standby.
 
             -Version 1 of HSRP                                      -Version 2 of HSRP
     -------------------------------------------------------------------------------------------------
@@ -43,17 +49,15 @@ echo            "FHRP (First Hop Redundancy Protocol)
     -------------------------------------------------------------------------------------------------
                     3 Multicast messages HSRP uses 
             
-            -Coup
-                -- messges is sent when a standby device wants to assume the
-                active
-                role.
-            -Hello
-                -- Convey other HSRP devices about Priority and state
-                information.
-            -Resign
-                -- Sent by a Active device when it is about to shutdown or
-                when a
-                device with a high priority sends a coupe or a hello request.
+        -Coup
+            -- messges is sent when a standby device wants to assume the
+            active role.
+        -Hello
+            -- Convey other HSRP devices about Priority and state 
+            information.
+        -Resign
+            -- Sent by a Active device when it is about to shutdown or when a
+            device with a high priority sends a coupe or a hello request.
 
         ----------------------------------------------------------------------
         |                         EXAM ALERT!!!!!!!!                         |
@@ -70,25 +74,21 @@ echo            "FHRP (First Hop Redundancy Protocol)
                 -- Forwards all traffic and responding to all ARP request
                 for the virtual IP address
 
-            -Init or disabled
-                -- Not ready to do HSRP yet, either the interface is down or
-                device
-                is booting up or its in a groupt with out a specific IP
-                address.
+        -Init or disabled
+            -- Not ready to do HSRP yet, either the interface is down or device
+            is booting up or its in a groupt with out a specific IP address.
 
-            - Learn
-                -- Device waits to receieve a hello messgae from the active
-                router
-                so it can learn the virtual IP address, its listening to the
-                active 
-                router.
+        - Learn
+            -- Device waits to receieve a hello messgae from the active router
+            so it can learn the virtual IP address, its listening to the active 
+            router.
             
-            - Listen
-                -- Device receives a hello message.
+        - Listen
+            -- Device receives a hello message.
 
-            - Speak
-                -- Device is sending and receiving heloo messgaes.
+        - Speak
+            -- Device is sending and receiving heloo messgaes.
 
-            - Standby
-                --Device is ready to become the active device in case the 
-                active device goes down"
+        - Standby
+            --Device is ready to become the active device in case the 
+            active device goes down"
