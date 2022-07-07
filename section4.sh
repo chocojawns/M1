@@ -18,33 +18,30 @@ echo            "FHRP (First Hop Redundancy Protocol)
             - (Hot Standby Routing Protocol)
             - HSRP is Cisco Proprietary
             - Active/Standby
-            - RFC 2281
-            - Port 1985, UDP IPV4
-            - Port 2029, UDP IPV6
+            - RFC 2281 Port 1985, UDP IPV4 Port 2029, UDP IPV6
+            - Preemption immediately picks the router/switch with the highest priority 
+            *obvi not great when a rouge device is at play*
+            - Preempt is disabled by default, you can enable it by entering the "standby preempt"
+            command
             -Highest priority is selected as the Active router 
                 --Default Priority is 100 
             ** IF SAME PRIORITY HIGHEST IP IS SELECTED AS PRIMARY ROUTE **
-            -Version 1 of HSRP 
-                -- MAC Address 00.00.0C.07.AC.XX
-                -- 224.0.0.2     MULTICAST
-                -- Cant do CGMP (Cisco Group Management Protocol) at the
-                same time as Version 1 HSRP.
-                -- Standby group number is 0 by default.
-                -- Standby hello time 3 seconds.
-                -- Standby holdtime 10 seconds.
-                -- Up to 255 standby groups.
-                
+           - HSRP can lower priority of devices that fail, goes down in increments of 10 be 
+           default called "object tracking"
+           -
 
-            -Version 2 of HSRP
-                -- MAC Address 00.00.0C.9F.F0.00
-                -- 224.0.0.102    MULTICAST
-                -- CGMP can be enabled at the same time as version 2 HSRP
-                because the leave processing is no longer mutually exclusive.
-                -- Able to use IPV6.
-                -- Up to 4096 standby groups.
-                --Standby holdtime 10 seconds.
-                -- Up to 255 standby groups
-
+            -Version 1 of HSRP                                      -Version 2 of HSRP
+    -------------------------------------------------------------------------------------------------
+    | -MAC Address 00.00.0C.07.AC.XX                 |       -MAC Address 00.00.0C.9F.F0.00         |
+    | -224.0.0.2  MULTICAST                          |       -224.0.0.102 MULTICAST                 |
+    | -Cant do CGMP (Cisco Group                     |       -CGMP can be enabled                   |
+    |     Management Protocol)                       |       -Able to use IPV6.                     |
+    | -Standby group number is 0 by default.         |       -Up to 4096 standby groups             |
+    | -Standby hello time 3 seconds.                 |       -Standby hello time 3 seconds          |
+    | -Standby holdtime 10 seconds.                  |       -Standby holdtime 10 sewconds          |
+    | -Up to 255 standby groups                      |                                              |
+    |                                                |                                              |
+    -------------------------------------------------------------------------------------------------
                     3 Multicast messages HSRP uses 
             
             -Coup
@@ -95,4 +92,4 @@ echo            "FHRP (First Hop Redundancy Protocol)
 
             - Standby
                 --Device is ready to become the active device in case the 
-                active device goes down"S
+                active device goes down"
