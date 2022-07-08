@@ -72,7 +72,7 @@ if [[ "${input}" == "s9" ]] ; then
 	/bin/bash ./section9.sh ;
     fi 
 if [[ "${input}" == "s10" ]] ; then
-	/bin/bash ./section10.sh ;
+	/bin/bash ./section10.sh 
     fi     
 if [[ "${input}" == "s11" ]] ; then
     /bin/bash ./section11.sh ;
