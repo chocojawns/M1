@@ -117,12 +117,27 @@ echo            "FHRP (First Hop Redundancy Protocol)
     -------------------------------------------------------------------------------------------------
     | -MAC Address 0000.5E00.01XX                    |       -MAC Address 0000.0C9F.FXXX            |
     | -224.0.0.18                                    |       -224.0.0.102 and 224.0.0.2             |
-    | -1 master several backups                      |       -1 active 1 standby many candidates    |
-    | -Virtual IP can be same as physical IP         |        -Virtual IP is diffrent than          |
-    |                                                |         physical                             |
-    | -Can only track objects.                       |       -Can track objects and interfaces      |
-    | -Timer is 1 second hello 3 holdtime            |       -Timer is 3 hello and 10 hold time     |
-    | -Authentication not supported by RFC           |       -Authentication supported              |
-       But is supported on IOS devices               |                                              |
-    | -Industry standard                             |       -Cisco proprietary                     |
+    | -1 master several backups.                     |       -1 active 1 standby many candidates.   |
+    | -Virtual IP can be same as physical IP.        |        -Virtual IP is diffrent than          |
+    |                                                |         physical.                            |
+    | -Can only track objects.                       |       -Can track objects and interfaces.     |
+    | -Timer is 1 second hello 3 holdtime.           |       -Timer is 3 hello and 10 hold time.    |
+    | -Authentication not supported by RFC.          |       -Authentication supported.             |
+    |  But is supported on IOS devices.              |                                              |
+    | -Industry standard.                            |       -Cisco proprietary.                    |
     -------------------------------------------------------------------------------------------------
+
+                                ******** GLBP ********
+
+        - (Gateway Load Balencing Protocol)
+        - Cisco proprietary
+        - UDP port 3222 
+        - Multiple Virtual gateways
+            -- Active Virtual Gateway (AVG) 
+                --- 1 active, 1 standby, many candidates
+            -- Active Virtual Forwarder (AVF)
+                ---
+        - Can only track objects 
+        - Same multicast address as HSRP 
+        - Same hello and dead timers as HSRP
+        - Mac address 0007.b400.XXYY ( "XX" is the group number and ("YY" is AVF number)"

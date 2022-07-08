@@ -11,7 +11,7 @@ Enterprise Campus Model"
 s3="s3:
 Enterprise Architecture Model"
 s4="s4:
-FHRP & SSO"
+FHRP"
 s5="s5:
 High Availability"
 s6="s6:
@@ -24,7 +24,8 @@ s9="s9:
 Physical Layer"
 s10="s10:
 SD-WAN"
-sections=("$list" "$s1" "$s2" "$s3" "$s4" "$s5" "$s6" "$s7" "$s8" "$s9" "$s10")
+s11="SSO & NSF"
+sections=("$list" "$s1" "$s2" "$s3" "$s4" "$s5" "$s6" "$s7" "$s8" "$s9" "$s10""$s11")
 echo "Type the section (EX: for "FHRP" type--> "s4") or type list for help." 
 read input
 if [[ "${input}" == "list" ]] ; then 
@@ -71,7 +72,10 @@ if [[ "${input}" == "s9" ]] ; then
 	/bin/bash ./section9.sh ;
     fi 
 if [[ "${input}" == "s10" ]] ; then
-    /bin/bash ./section10.sh ;
+	/bin/bash ./section10.sh ;
+    fi     
+if [[ "${input}" == "s11" ]] ; then
+    /bin/bash ./section11.sh ;
      
 else
     echo "ERROR: --> look at the instructions B"
