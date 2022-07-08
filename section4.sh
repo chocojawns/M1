@@ -109,3 +109,20 @@ echo            "FHRP (First Hop Redundancy Protocol)
         VRRP
             -- Setting the priority value to 0 triggers the next backup to change
             the master.
+        - You can use the physical IP address of the group members as the virtual IP address.
+        - Advertisement default is 1 second and a 3 second hold time.
+        -port number 112
+
+                         -VRRP                                             - HSRP
+    -------------------------------------------------------------------------------------------------
+    | -MAC Address 0000.5E00.01XX                    |       -MAC Address 0000.0C9F.FXXX            |
+    | -224.0.0.18                                    |       -224.0.0.102 and 224.0.0.2             |
+    | -1 master several backups                      |       -1 active 1 standby many candidates    |
+    | -Virtual IP can be same as physical IP         |        -Virtual IP is diffrent than          |
+    |                                                |         physical                             |
+    | -Can only track objects.                       |       -Can track objects and interfaces      |
+    | -Timer is 1 second hello 3 holdtime            |       -Timer is 3 hello and 10 hold time     |
+    | -Authentication not supported by RFC           |       -Authentication supported              |
+       But is supported on IOS devices               |                                              |
+    | -Industry standard                             |       -Cisco proprietary                     |
+    -------------------------------------------------------------------------------------------------
