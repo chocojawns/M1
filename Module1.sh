@@ -45,7 +45,7 @@ if [[ "${input}" == "list" ]] ; then
     /bin/bash ./topics.sh
     fi
 if [[ "${input}" == "s1" ]] ; then 
-	echo ${section1[@]}
+	/bin/bash ./section1.sh
     fi
 if [[ "${input}" == "s2" ]] ; then
     /bin/bash ./section2.sh
