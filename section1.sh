@@ -106,16 +106,19 @@ Hierarchial design uses four design principles:
                     As stated above essentially you just use layer devices all around.
                     
                     
-    ■ Simplified campus design
-            - You can stack any switch to any Campus Model to make things
+    ■ Simplified campus design (using VSS and stackwise)
+            - StackWise can be applied to any switch to any Campus Model to make things
             more simple.
 
                 --VSS (Virtual Switching System) / Cisco StackWise
                     --- Allows swithes to act/ be configured as one switch.
                     --- Access switch can use a single Multichassis EtherChannel
                     (MEC) upstream link to connect to a distribution switch.
-                    --- Eliminates the use for FHRP.
+                    --- Eliminates the use for FHRP because it is logically using 1 IP gateway
                     --- STP is not relied on as much.
                     --- Allows you to use a Hub-and-spoke network topology.
 
+
                     ■ Software-Defined Access (SD-Access)
+        - Automates policies and reduces time to adapt to the network, also reduces security breaches
+        - Part of the DNA (digital Network Architecture)                     
